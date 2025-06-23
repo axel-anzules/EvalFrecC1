@@ -17,7 +17,6 @@ public class ListVolquetas extends AppCompatActivity {
 
     private EditText multiLineTextView; // O TextView multiLineTextView;
     private RequestQueue requestQueue;
-    private String urlApi = "https://uteqia.com/api/volquetas"; //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +35,8 @@ public class ListVolquetas extends AppCompatActivity {
 
     private void fetchDataFromApi() {
         // Crea una petición StringRequest
+        //
+        String urlApi = "https://uteqia.com/api/volquetas";
         StringRequest stringRequest = new StringRequest(Request.Method.GET, urlApi,
                 new Response.Listener<String>() {
                     @Override
